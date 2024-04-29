@@ -13,7 +13,8 @@ This is a code that displays the available rooms and the times its available in 
 - Test table to show that the system works. 
 ## Client Requirement 
  
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Requirement ID    | Description   | Mandatory [M] or desirable [D] |
+| ------------- | ------------- | ------------- |
+| 1  | log into system  | D |
+| 2  | creating Booking   | M |
+| 3  | Room details  | M |
