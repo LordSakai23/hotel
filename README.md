@@ -139,3 +139,33 @@ Non-Technical Survey Questions
 10. Do you have any concerns/complaints about the application?
 
 These questions evaluate user perception, environmental awareness, and engagement, providing valuable insight into how well the application communicates its purpose and serves its audience.
+
+**Technical Feedback Responses – Energy-Saving Application**
+
+**1. Is the code well-commented and easy to follow?**
+Yes, the code is fairly well-commented. Key functions, such as the carbon footprint calculator logic and energy usage tracking modules, include brief summaries describing their purpose. However, some of the helper methods and database interaction logic could benefit from more detailed comments. Overall, a developer familiar with C# would be able to follow the code with minimal confusion, but additional annotations—especially around calculation formulas and data retrieval—would improve clarity.
+
+**2. Are the variable names descriptive and appropriate?**
+Variable names are mostly descriptive and align with best practices. For instance, variables like `dailyEnergyConsumption`, `carbonEmissionsKg`, and `userProfileData` clearly represent their functions or contents. Some internal variables (e.g., loop counters like `x` or `temp1`) could be renamed to more meaningful terms to enhance readability, especially in functions that handle dynamic input or iterate over energy data entries.
+
+**3. What’s the best approach to linking this code to the database?**
+Currently, the application uses ADO.NET with SQL commands for data access, which works but is a bit verbose and prone to SQL injection if not carefully handled. A better approach might be to implement Entity Framework Core, which would simplify data manipulation using LINQ and abstract the SQL layer. This would also make the code more maintainable and easier to adapt if the data model evolves. Additionally, using environment variables or a secure configuration system (e.g., appsettings.json with user secrets) to manage connection strings would improve security.
+
+**4. Are the carbon footprint calculations accurate and efficient?**
+The carbon footprint calculator appears to use standard formulas, factoring in parameters such as electricity usage (in kWh), gas consumption, and transport data (e.g., vehicle mileage). The calculations are accurate from a logic standpoint and are structured to allow easy adjustments for different units or regional emission factors. However, efficiency could be improved by isolating repeated calculations into reusable utility methods. Also, including unit tests to validate different scenarios (e.g., low/high energy users, zero input) would enhance reliability and make debugging easier.
+
+---
+
+**Non-Technical Feedback Responses – Energy-Saving Application**
+
+**1. Is the colour scheme visually appealing and appropriate?**
+Yes, the colour scheme is very appropriate. The use of green shades throughout the interface instantly gives off an “eco-friendly” and energy-conscious vibe, which aligns well with the purpose of the app. The contrast between background and text is good, making it readable. The inclusion of icons and soft accent colours (like light blues and greys) helps break up the green and keeps the interface from feeling too monochrome or overwhelming.
+
+**2. Does the user interface feel intuitive and easy to use?**
+Overall, yes. The layout is simple and clearly designed with the user in mind. The main dashboard provides a clear summary of energy usage and estimated carbon footprint, and buttons are labeled in plain language (e.g., "Track Energy", "View Suggestions", "Calculate Footprint"). First-time users can figure out where to go without much trial and error. However, adding short tooltips or a brief onboarding guide could make things even smoother for users unfamiliar with the topic.
+
+**3. Is it easy to navigate through the application?**
+Navigation is quite smooth. The menu is persistent and logically structured, with sections like “Dashboard,” “Reports,” “Tips,” and “Profile” all easily accessible. The transitions between screens are fast, and users can return to the homepage with a single tap or click. The back button also works as expected, which adds to the feeling of control. It’s easy to find specific features like the calculator or daily energy summary.
+
+**4. Does the overall application look too complex for everyday users?**
+Not really. While it’s clear that there are multiple features available, the interface doesn’t feel cluttered or overly technical. Everything is broken down into steps, and the language is simple and non-technical. For example, the carbon footprint calculator asks for basic details in a step-by-step format, avoiding jargon. The app does a good job of making a complex subject more approachable. That said, older users or those less comfortable with technology might appreciate a "simple mode" or visual walkthrough.
